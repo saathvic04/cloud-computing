@@ -6,36 +6,48 @@
     <title>Document</title>
     <style>
         h1 {
-            justify-content: center;
-            display: flex;
+            text-align: center; /* Center align the heading */
             color: white;
             position: relative;
             z-index: 2;
         }
         img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto; /* Ensure image aspect ratio is maintained */
+            object-fit: cover; /* Cover entire container */
+            display: block; /* Ensure image behaves as a block element */
         }
         body {
             margin: 0;
-            overflow: hidden;
-            height: 100%;
             background-color: rgb(43, 16, 132);
+            height: 100vh; /* Set body height to full viewport height */
+            overflow-x: hidden; /* Hide horizontal overflow */
         }
         .button-container {
             position: absolute;
-            top: 35px;
+            top: 20px;
             right: 10px;
+            z-index: 2;
         }
         a {
-            display: block;  /* Make the <a> tag a block element */
+            display: block;
             background-color: rgb(74, 143, 172);
             padding: 10px 20px;
             text-decoration: none;
             color: rgb(2, 15, 16);
             border-radius: 5px;
             font-weight: bold;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .button-container {
+                top: 10px;
+                right: 5px;
+            }
+            a {
+                padding: 8px 16px;
+            }
         }
     </style>
 </head>

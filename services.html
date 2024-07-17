@@ -3,28 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Amazon Web Services (AWS)</title>
     <style>
-        /* Style for placing content next to the image */
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Main heading */
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Flex container for content */
         .content {
             display: flex;
             align-items: center;
+            justify-content: center;
+            flex-wrap: wrap; /* Wrap content on smaller screens */
+            gap: 40px;
+            margin-bottom: 20px; /* Optional: Adjust spacing between sections */
+            padding: 0 20px; /* Optional: Add padding for better spacing */
+        }
+
+        /* Image styles */
+        .content img {
+            width: 50%; /* Set image width to 50% of the container */
+            max-width: 300px; /* Limit maximum width */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 20px; /* Optional: Adjust spacing between image and text */
+        }
+
+        /* Content text */
+        .content > div {
+            flex: 1; /* Fill remaining space */
+        }
+
+        .content h2,
+        .content h3 {
+            margin-top: 0; /* Remove default margin */
+            font-size: large; /* Adjust font size */
         }
 
         .content p {
-            margin-left: 80px; /* Adjust margin as needed */
+            margin-top: 0; /* Remove default margin */
+            font-size: medium; /* Adjust font size */
+            line-height: 1.6; /* Improve readability */
         }
 
-        /* Style for the next button */
+        /* Next button */
         .next-button {
-            position: absolute;
-            top: 20px;
+            position: fixed;
+            bottom: 20px;
             right: 20px;
             padding: 10px 20px;
             background-color: #007bff;
             color: white;
             border: none;
             cursor: pointer;
+            z-index: 10; /* Ensure button is above content */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .content img {
+                width: 100%; /* Adjust image to full width on smaller screens */
+                margin-right: 0; /* Remove right margin for better spacing */
+                margin-bottom: 20px; /* Add bottom margin for spacing */
+            }
+
+            .content {
+                padding: 0 10px; /* Adjust padding for smaller screens */
+            }
+
+            .next-button {
+                font-size: 14px; /* Adjust font size for smaller screens */
+                padding: 8px 16px; /* Adjust padding for smaller screens */
+            }
         }
     </style>
 </head>
@@ -39,11 +98,14 @@
             <p>Elastic Beanstalk: Easy-to-use service for deploying and scaling web applications and services.</p>
         </div>
     </div>
+
     <div class="content">
         <h3>Storage:</h3>
-        <p>S3 (Simple Storage Service): Scalable object storage.</p>
-        <p>EBS (Elastic Block Store): Block storage for use with EC2.</p>
-        <p>Glacier: Low-cost cloud archive storage.</p>
+        <div>
+            <p>S3 (Simple Storage Service): Scalable object storage.</p>
+            <p>EBS (Elastic Block Store): Block storage for use with EC2.</p>
+            <p>Glacier: Low-cost cloud archive storage.</p>
+        </div>
     </div>
     
     <!-- Next button -->

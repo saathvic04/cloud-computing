@@ -5,37 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* Style for placing content next to the image */
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Main heading */
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Flex container for content */
         .content {
             display: flex;
             align-items: center;
-            width: 100%;
-            margin-bottom: 20px; /* Optional: Adjust spacing between sections */
-            gap: 40px;
             justify-content: center;
-            display: flex;
+            flex-wrap: wrap; /* Wrap content on smaller screens */
+            gap: 40px;
+            margin-bottom: 20px; /* Optional: Adjust spacing between sections */
+            padding: 0 20px; /* Optional: Add padding for better spacing */
         }
 
+        /* Image styles */
         .content img {
             width: 50%; /* Set image width to 50% of the container */
-            height: 60%; /* Maintain aspect ratio */
+            max-width: 300px; /* Limit maximum width */
+            height: auto; /* Maintain aspect ratio */
             margin-right: 20px; /* Optional: Adjust spacing between image and text */
-            gap: 40px;
         }
 
+        /* Content text */
         .content > div {
             flex: 1; /* Fill remaining space */
         }
 
-        .content p {
+        .content h2 {
             margin-top: 0; /* Remove default margin */
-         font-size: x-large;
-
+            font-size: large; /* Adjust font size */
         }
 
-        /* Style for the next button */
+        .content p {
+            margin-top: 0; /* Remove default margin */
+            font-size: medium; /* Adjust font size */
+            line-height: 1.6; /* Improve readability */
+        }
+
+        /* Next button */
         .next-button {
-            position: absolute;
+            position: fixed;
             top: 20px;
             right: 20px;
             padding: 10px 20px;
@@ -43,11 +64,40 @@
             color: white;
             border: none;
             cursor: pointer;
+            z-index: 10; /* Ensure button is above content */
         }
-        h3{
-            padding: 70px 60px;;
+
+        /* Previous button */
+        .previous-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            z-index: 10; /* Ensure button is above content */
         }
-        
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .content img {
+                width: 100%; /* Adjust image to full width on smaller screens */
+                margin-right: 0; /* Remove right margin for better spacing */
+                margin-bottom: 20px; /* Add bottom margin for spacing */
+            }
+
+            .content {
+                padding: 0 10px; /* Adjust padding for smaller screens */
+            }
+
+            .next-button,
+            .previous-button {
+                font-size: 14px; /* Adjust font size for smaller screens */
+                padding: 8px 16px; /* Adjust padding for smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -61,20 +111,18 @@
             <p>Tools: Jenkins, Travis CI, CircleCI, GitLab CI/CD.</p>
         </div>
     </div>
-   
+
+    <div class="content">
+        <h2>Continuous Deployment (CD):</h2>
         <div>
-            <h2>Tools: Ansible, Chef, Puppet, Kubernetes (for deployment orchestration).</h2>
             <p>Definition: Automating the deployment process to deliver code changes to production frequently and reliably.</p>
             <p>Goals: Accelerate time to market, reduce deployment risks, and increase release frequency.</p>
-            <p>Tools: Ansible, Chef, Puppet, Kubernetes (for deployment orchestration)..</p>
+            <p>Tools: Ansible, Chef, Puppet, Kubernetes (for deployment orchestration).</p>
         </div>
     </div>
     
-    
-    <!-- Next button -->
+    <!-- Next and previous buttons -->
     <button class="next-button" onclick="window.location.href = 'next2-page.html';">DevOps</button>
-    <div class="button-container">
-<a href="next1-page.html">previous</a>
-</div>
+    <button class="previous-button" onclick="window.location.href = 'next1-page.html';">Previous</button>
 </body>
 </html>
