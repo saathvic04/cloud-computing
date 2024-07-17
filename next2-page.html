@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Style for placing content next to the image */
+        .content {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px; /* Optional: Adjust spacing between sections */
+            gap: 40px;
+            justify-content: center;
+            display: flex;
+        }
+
+        .content img {
+            width: 50%; /* Set image width to 50% of the container */
+            height: 60%; /* Maintain aspect ratio */
+            margin-right: 20px; /* Optional: Adjust spacing between image and text */
+            gap: 40px;
+        }
+
+        .content > div {
+            flex: 1; /* Fill remaining space */
+        }
+
+        .content p {
+            margin-top: 0; /* Remove default margin */
+         font-size: x-large;
+
+        }
+
+        /* Style for the next button */
+        .next-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        h3{
+            padding: 70px 60px;;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Continuous Integration/Continuous Deployment (CI/CD)</h1>
+    <div class="content">
+        <img src="https://miro.medium.com/v2/resize:fit:640/0*h-oNfEHFjEB2hOpZ.png" alt="">
+        <div>
+            <h2>Continuous Integration (CI):</h2>
+            <p>Definition: The practice of frequently integrating code changes into a shared repository.</p>
+            <p>Goals: Detect integration issues early, improve collaboration, and automate builds and tests.</p>
+            <p>Tools: Jenkins, Travis CI, CircleCI, GitLab CI/CD.</p>
+        </div>
+    </div>
+   
+        <div>
+            <h2>Tools: Ansible, Chef, Puppet, Kubernetes (for deployment orchestration).</h2>
+            <p>Definition: Automating the deployment process to deliver code changes to production frequently and reliably.</p>
+            <p>Goals: Accelerate time to market, reduce deployment risks, and increase release frequency.</p>
+            <p>Tools: Ansible, Chef, Puppet, Kubernetes (for deployment orchestration)..</p>
+        </div>
+    </div>
+    
+    
+    <!-- Next button -->
+    <button class="next-button" onclick="window.location.href = 'next2-page.html';">DevOps</button>
+    <div class="button-container">
+<a href="next1-page.html">previous</a>
+</div>
+</body>
+</html>

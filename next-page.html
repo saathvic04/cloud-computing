@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Style for placing content next to the image */
+        .content {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px; /* Optional: Adjust spacing between sections */
+            gap: 40px;
+            justify-content: center;
+            display: flex;
+        }
+
+        .content img {
+            width: 50%; /* Set image width to 50% of the container */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 20px; /* Optional: Adjust spacing between image and text */
+            gap: 40px;
+        }
+
+        .content > div {
+            flex: 1; /* Fill remaining space */
+        }
+
+        .content p {
+            margin-top: 0; /* Remove default margin */
+         font-size: x-large;
+
+        }
+
+        /* Style for the next button */
+        .next-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        h3{
+            padding: 70px 60px;;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>AZURE</h1>
+    <div class="content">
+        <img src="https://wac-cdn.atlassian.com/dam/jcr:8af4704a-1f8d-45c3-8220-3ddc59c21f16/Blue_Azure_Logo.svg.png?cdnVersion=1941" alt="">
+        <div>
+            <h2>Compute:</h2>
+            <p>Virtual Machines: On-demand scalable computing resources.</p>
+            <p>App Services: Platform for building, deploying, and scaling web apps.</p>
+            <p>Azure Functions: Serverless computing to execute event-driven code.</p>
+        </div>
+    </div>
+    <div class="content">
+        <h3>Storage:</h3>
+        <div>
+            <p>Blob Storage: Object storage solution.</p>
+            <p>Disk Storage: Managed disks for VMs.</p>
+            <p>File Storage: Fully managed file shares in the cloud.</p>
+        </div>
+    </div>
+    
+    <!-- Next button -->
+    <button class="next-button" onclick="window.location.href = 'next1-page.html';">Next</button>
+    <div class="button-container">
+<a href="services.html">previous</a>
+</div>
+</body>
+</html>

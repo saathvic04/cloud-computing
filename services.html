@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Style for placing content next to the image */
+        .content {
+            display: flex;
+            align-items: center;
+        }
+
+        .content p {
+            margin-left: 80px; /* Adjust margin as needed */
+        }
+
+        /* Style for the next button */
+        .next-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Amazon Web Services (AWS)</h1>
+    <div class="content">
+        <img src="https://www.spiceworks.com/wp-content/uploads/2022/04/AWS.png" alt="">
+        <div>
+            <h2>Compute:</h2>
+            <p>EC2 (Elastic Compute Cloud): Virtual servers in the cloud.</p>
+            <p>Lambda: Serverless computing to run code without provisioning servers.</p>
+            <p>Elastic Beanstalk: Easy-to-use service for deploying and scaling web applications and services.</p>
+        </div>
+    </div>
+    <div class="content">
+        <h3>Storage:</h3>
+        <p>S3 (Simple Storage Service): Scalable object storage.</p>
+        <p>EBS (Elastic Block Store): Block storage for use with EC2.</p>
+        <p>Glacier: Low-cost cloud archive storage.</p>
+    </div>
+    
+    <!-- Next button -->
+    <button class="next-button" onclick="window.location.href = 'next-page.html';">Next</button>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Style for placing content next to the image */
+        .content {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px; /* Optional: Adjust spacing between sections */
+            gap: 40px;
+            justify-content: center;
+            display: flex;
+        }
+
+        .content img {
+            width: 50%; /* Set image width to 50% of the container */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 20px; /* Optional: Adjust spacing between image and text */
+            gap: 40px;
+        }
+
+        .content > div {
+            flex: 1; /* Fill remaining space */
+        }
+
+        .content p {
+            margin-top: 0; /* Remove default margin */
+         font-size: x-large;
+
+        }
+
+        /* Style for the next button */
+        .next-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        h3{
+            padding: 70px 60px;;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Google Cloud Platform (GCP)</h1>
+    <div class="content">
+        <img src="https://media.licdn.com/dms/image/D5612AQEjZljStRxpOQ/article-cover_image-shrink_720_1280/0/1691568005689?e=2147483647&v=beta&t=rxvxeJFtvRWekVeB8NzaZV-UV_woa0C5XIjbZsZzPnY" alt="">
+        <div>
+            <h2>Compute:</h2>
+            <p>Compute Engine: Scalable virtual machines.</p>
+            <p>App Engine: Managed platform for building and deploying apps.</p>
+            <p>Cloud Functions: Event-driven serverless compute platform.</p>
+        </div>
+    </div>
+    <div class="content">
+        <h3>Storage:</h3>
+        <div>
+            <p>Cloud Storage: Unified object storage.</p>
+            <p>Persistent Disk: High-performance block storage.</p>
+            <p>Filestore: Managed file storage for applications.</p>
+        </div>
+    </div>
+    
+    <!-- Next button -->
+    <button class="next-button" onclick="window.location.href = 'next2-page.html';">DevOps</button>
+    <div class="button-container">
+<a href="next-page.html">previous</a>
+</div>
+</body>
+</html>
